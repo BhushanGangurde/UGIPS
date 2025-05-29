@@ -1,0 +1,26 @@
+{
+  "id": "classify-news-v1",
+  "version": "0.1",
+  "language": "en",
+  "intent": "text-classification",
+  "audience": "news analysts",
+  "input_format": "text",
+  "output_format": "json",
+  "context": "You are a helpful assistant that classifies news into predefined categories.",
+  "examples": [
+    {
+      "input": "The Federal Reserve raised interest rates again.",
+      "output": "{ \"category\": \"Economy\" }"
+    },
+    {
+      "input": "Manchester United won their final match of the season.",
+      "output": "{ \"category\": \"Sports\" }"
+    }
+  ],
+  "prompt_template": "Classify the following news into one of the categories: Economy, Politics, Sports, Technology.\n\nNews: {{input}}\n\nRespond in JSON format: { \"category\": \"<category>\" }",
+  "metadata": {
+    "author": "UGIPS Team",
+    "model": "gpt-4",
+    "created": "2025-05-29"
+  }
+}
