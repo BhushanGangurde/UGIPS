@@ -58,7 +58,7 @@ This repository uses a dual-license model:
 | `/tools`, `/examples`       | [MIT License](LICENSE)                                            |
 
 Attribution for UGIPS Spec:
-UGIPS was initiated and authored by [Bhushan and VITA Solutions] (© 2025). When using or referencing the specification, please include attribution and a link to this repository.
+UGIPS was initiated and authored by [BhushanGangurde and VITA Solutions] (© 2025). When using or referencing the specification, please include attribution and a link to this repository.
 
 🤝 Contributing
 We welcome contributions from the community!
