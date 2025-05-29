@@ -1,1 +1,63 @@
-
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UGIPS Prompt Schema",
+  "description": "Schema for Universal Generative Instruction Prompt Standard (UGIPS)",
+  "type": "object",
+  "required": ["id", "version", "language", "intent", "input_format", "output_format", "prompt_template"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the UGIPS prompt"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+      "description": "UGIPS schema version this prompt conforms to"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code (e.g., en, fr, de)"
+    },
+    "intent": {
+      "type": "string",
+      "description": "What the prompt is trying to achieve (classification, summarization, chat, etc.)"
+    },
+    "audience": {
+      "type": "string",
+      "description": "Target audience of the prompt (optional)"
+    },
+    "input_format": {
+      "type": "string",
+      "description": "Expected input format (e.g., text, json, code)"
+    },
+    "output_format": {
+      "type": "string",
+      "description": "Expected output format (e.g., json, list, markdown, plain text)"
+    },
+    "context": {
+      "type": "string",
+      "description": "Optional context or system instructions"
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["input", "output"],
+        "properties": {
+          "input": { "type": "string" },
+          "output": { "type": "string" }
+        }
+      }
+    },
+    "prompt_template": {
+      "type": "string",
+      "description": "The prompt template with placeholders (e.g., {{input}})"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Optional metadata (e.g., model, author, source)"
+    }
+  },
+  "additionalProperties": false
+}
